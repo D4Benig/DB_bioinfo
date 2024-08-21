@@ -1,0 +1,44 @@
+---
+  title: "MinION_Data_Analysis"
+output: html_document
+date: "2024-08-20"
+---
+  
+  ```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# PhD Project  
+## Bioinformatics Analysis 
+
+## Following the idea of Oliva and https://happygitwithr.com/new-github-first  
+1. Creat a new project on Github
+Then make a repository on github, gitlab, gitbucket  
+2. New RStudio Project via git clone  
+on R console use the following code: 
+  
+  #usethis::create_from_github(
+  #  "https://github.com/YOU/YOUR_REPO.git",
+  #  destdir = "~/path/to/where/you/want/the/local/repo/"
+  #)
+  
+  Additional Steps for getting that code to run:
+  #> usethis::create_from_github("https://github.com/D4Benig/DB_bioinfo.git",
+  #+ destdir = "D:/confirmation preparation/Git_RStudio")
+  install the usethis package the call it in using library(usethis)
+set token on github make sure repo is checked, others can wait.
+install gh package and call it in. then use gh::gh_token(xx) to check if it shows. It didn't so i used file.edit("~/.Renviron"), a window opened, i pasted the token there and saved it. 
+then ran Sys.getenv("GITHUB_PAT") to confirm if it shows now
+then ran the code above and it was successful 
+
+then i installed the renv package, called it in and inilizated it using renv::init() # my files are also saved in "C:/Users/dbenig/AppData/Local/R/cache/R/renv"
+Project 'D:/confirmation preparation/BioinformaticsAnalysis' loaded. [renv 1.0.7]
+
+### MinION Bioinformatics Pipeline   
+1. I will run dorado in a docker container  
+2. My project environment  
+Login to NESI HPC  
+cd cd /nesi/project/massey04203  
+Load Required Modules  
+
+3. Choose or Create Docker/Apptainer Images  
